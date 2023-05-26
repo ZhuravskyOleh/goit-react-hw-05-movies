@@ -21,9 +21,42 @@ export async function FetchFilm(searchValue) {
                 return response.data.results;
         } catch (error) {
                 console.log(error);
-                return [];
         };
 };
+
+export async function FetchDetails(id) {
+        try {
+                const response = await axios(`${BASE_URL}movie/${id}?language=en-US&${API_KEY}`);
+                return response.data;
+        } catch (error) {
+                console.log(error);
+        };
+};
+
+export async function FetchCasts(id) {
+        try {
+                const response = await axios(`${BASE_URL}movie/${id}/credits?language=en-US&${API_KEY}`);
+                return response.data.cast;
+
+        } catch (error) {
+                console.log(error);
+        };
+};
+
+export async function FetchReview(id) {
+        try {
+                const response = await axios(`${BASE_URL}movie/${id}/reviews?language=en-US&page=1&${API_KEY}`);
+                return response.data.results;
+
+        } catch (error) {
+                console.log(error);
+        }
+}
+
+
+// https://api.themoviedb.org/3/movie/12/reviews?language=en-US&page=1
+
+
 
 
 

@@ -18,3 +18,13 @@ code {
   max-width: 1200px;
   margin: 10px auto;
 }
+
+.span {
+  font-weight: 500;
+}
+
+.cast-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

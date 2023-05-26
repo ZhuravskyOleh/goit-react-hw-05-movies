@@ -8,8 +8,7 @@ export const HomePage = () => {
     const [movies, setMovies] = useState([]);
     
     useEffect(() => {
-        FetchTrends().then(setMovies)
-      
+        FetchTrends().then(setMovies)   
   }, []);
 
     return (
