@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FetchReview } from "components/API/API";
 
-export const Reviews = () => {
+const Reviews = () => {
     const [reviev, setReviev] = useState([]);
     const { id } = useParams();
 
@@ -22,5 +22,7 @@ export const Reviews = () => {
                 </li>
             ))}
         </ul>
-    )
-}
+    );
+};
+
+export default Reviews;

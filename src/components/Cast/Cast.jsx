@@ -2,7 +2,7 @@ import { FetchCasts } from "components/API/API";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export const Cast = () => {
+const Cast = () => {
     const [casts, setCasts] = useState([]);
 
     const { id } = useParams();
@@ -28,4 +28,6 @@ export const Cast = () => {
             ))}
         </ul>
     );
-}
+};
+
+export default Cast;

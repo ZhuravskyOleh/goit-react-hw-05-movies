@@ -1,8 +1,8 @@
 import { FetchDetails } from "components/API/API";
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, Suspense } from "react"
 import { Link, Outlet, useLocation, useParams } from "react-router-dom"
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
     const [details, setDetails] = useState(null);
     const { id } = useParams();
     const {
@@ -18,6 +18,10 @@ export const MovieDetails = () => {
     }, [id]);
 
     const location = useLocation();
+    
+    if (!details) {
+        return <div>Нет такого фильма</div>
+    }
     
     return (
         <>
@@ -40,10 +44,14 @@ export const MovieDetails = () => {
                 <Link to="cast" className="card-link">Cast</Link>
                 <Link to="reviews" className="card-link">Reviews</Link>
             </ul>
-            <Outlet />
+            <Suspense fallback={<div>Loading...</div>}>
+                <Outlet />
+            </Suspense>
         </>
     );
     
 };
+
+export default MovieDetails;
 
 
