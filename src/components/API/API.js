@@ -17,13 +17,13 @@ export async function FetchTrends() {
 
 export async function FetchFilm(searchValue) {
         try {
-                const response = await axios(`${ BASE_URL }search / movie ? ${ API_KEY } & query=${ searchValue } & include_adult=false & language=en - US & page=1`);
+                const response = await axios(`${ BASE_URL }search/movie?${ API_KEY }&query=${ searchValue }&include_adult=false&language=en-US&page=1`);
                 return response.data.results;
         } catch (error) {
                 console.log(error);
                 return [];
-        }
-}
+        };
+};
 
 
 

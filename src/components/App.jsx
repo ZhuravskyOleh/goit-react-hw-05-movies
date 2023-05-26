@@ -5,11 +5,13 @@ import { Movie } from "./Pages/Movie";
 
 export const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={ <HomePage/>} />
-        <Route path='movie' element={<Movie />} />
-      </Route>
-    </Routes>
+    <div className="container">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={ <HomePage/>} />
+          <Route path='movie' element={<Movie />} />
+        </Route>
+      </Routes>
+    </div>
   );
 };
