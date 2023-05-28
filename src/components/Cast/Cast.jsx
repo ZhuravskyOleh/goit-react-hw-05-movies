@@ -1,6 +1,7 @@
 import { FetchCasts } from "components/API/API";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Cast = () => {
     const [casts, setCasts] = useState([]);
@@ -28,6 +29,12 @@ const Cast = () => {
             ))}
         </ul>
     );
+};
+
+Cast.propTypes = {
+    profile_path: PropTypes.string,
+    name: PropTypes.string,
+    character: PropTypes.string
 };
 
 export default Cast;

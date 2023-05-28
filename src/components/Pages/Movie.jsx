@@ -20,7 +20,7 @@ import { MovieList } from "components/MovieList/MovieList";
   function handleSubmit(e) {
     e.preventDefault();
     setQuery({
-      query: e.currentTarget.elements.q.value,
+      query: e.currentTarget.elements.search.value,
     });
     e.currentTarget.reset();
   }
@@ -39,7 +39,7 @@ import { MovieList } from "components/MovieList/MovieList";
             className="form-control"
             id="movieSearch"
             placeholder="Film search"
-            name="q"
+            name="search"
           />
         </div>
         <div className="col-auto">

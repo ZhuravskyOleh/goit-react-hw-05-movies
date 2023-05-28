@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FetchReview } from "components/API/API";
+import PropTypes from 'prop-types';
 
 const Reviews = () => {
     const [reviev, setReviev] = useState([]);
@@ -23,6 +24,11 @@ const Reviews = () => {
             ))}
         </ul>
     );
+};
+
+Reviews.propTypes = {
+    content: PropTypes.string,
+    author: PropTypes.string,
 };
 
 export default Reviews;
