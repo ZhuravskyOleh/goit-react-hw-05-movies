@@ -49,7 +49,7 @@ import { MovieList } from "components/MovieList/MovieList";
         </div>
         {movies?.length > 0 && (
         <>
-          <h2>List movies</h2>
+          <h2>Search results:</h2>
           <MovieList data={movies} />
         </>
       )}
