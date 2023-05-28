@@ -19,9 +19,6 @@ const MovieDetails = () => {
 
     const location = useLocation();
     
-    if (!details) {
-        return <div>Нет такого фильма</div>
-    }
     
     return (
         <>
